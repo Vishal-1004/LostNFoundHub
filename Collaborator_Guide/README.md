@@ -1,4 +1,4 @@
-### Procedure to follow while working with this respository
+## Procedure to follow while working with this respository
 
 `Step 1: `
 Make a clone of this repository in your local device. In order to do so copy the HTTP link given under the code button dropdown and then in a specific folder in your PC open its git bash terminal, then enter the following command.
