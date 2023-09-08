@@ -14,4 +14,5 @@ Introducing our Lost and Found website for the college. It's a simple solution t
 ## Phase 1 Of Development Cycle
 We are currently in the process of conducting a literature review. During this phase, we are diligently documenting all the important and intriguing features we have discovered in the respective articles. 
 Based on our comprehensive analysis, we will compile a list of features that we intend to incorporate into our own LostNFoundHub website. Following this, we will create a website skeleton and subsequently design a responsive layout for the website using Figma.
+
 `Due Date: 30th September 2023`
