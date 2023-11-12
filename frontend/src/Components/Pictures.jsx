@@ -5,41 +5,65 @@ function Pictures() {
   return (
     <PictureStyle>
       <div>
-        <h1 className="slogan-container">
-          LOST ON CAMPUS FOUND ONLINE: BRINGING BELONGINGS BACK TO YOU
-        </h1>
-        <div>
-          <h1>Lost an Item?</h1>
-          <div className="content-container">
-            <div className="steps-container">
-              <span className="directions-container">
-                <b>Steps:</b>
-                <br />
-                <ul>
-                  <li>Step 1: Lorem Ipsum is simply dummy text</li>
-                  <li>
-                    Step 2: Lorem Ipsum has been the industry's standard dummy
-                    text
+        <div className="top-heading d-flex flex-column align-items-center">
+          <h1 className="slogan-container">
+            LOST ON CAMPUS <br /> FOUND ONLINE:
+            <br /> BRINGING BELONGINGS
+            <br /> BACK TO YOU
+          </h1>
+          <div className="d-flex flex-row justify-content-center align-items-center">
+            <button type="button" className="btn btn-primary mx-3 py-2 px-3">
+              Lost Something?
+            </button>
+            <button type="button" className="btn btn-primary mx-3 py-2">
+              Found Something?
+            </button>
+          </div>
+        </div>
+        <div className="container">
+          <h2>Lost an Item?</h2>
+          <div className="container">
+            <div className="row justify-content-between lost-item-content">
+              <div className="col-12 col-md-6">
+                <ol className="list-group list-group-numbered">
+                  <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <div className="ms-2 me-auto">
+                      <div className="fw-bold">Login/Register</div>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Possimus, mollitia accusamus? Quis nesciunt nihil animi.
+                    </div>
                   </li>
-                  <li>
-                    Step 3: It was popularised in the 1960s with the release of
-                    Letraset sheets
+                  <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <div className="ms-2 me-auto">
+                      <div className="fw-bold">Lost Item Section</div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi ad, maxime error laudantium voluptatibus
+                      consequuntur.
+                    </div>
                   </li>
-                  <li>
-                    Step 4: It has survived not only five centuries, but also
-                    the leap into electronic typesetting, remaining essentially
-                    unchanged.
+                  <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <div className="ms-2 me-auto">
+                      <div className="fw-bold">Select Your Item</div>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Rem sed quibusdam atque ex vel mollitia!
+                    </div>
                   </li>
-                  <li>
-                    Step 5: Contrary to popular belief, Lorem Ipsum is not
-                    simply random text. It has roots in a piece of classical
-                    Latin literature from 45 BC, making it over 2000 years old.
+                  <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <div className="ms-2 me-auto">
+                      <div className="fw-bold">Visit AB-1 2nd Floor</div>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Rem sed quibusdam atque ex vel mollitia!
+                    </div>
                   </li>
-                </ul>
-              </span>
-            </div>
-            <div className="picture-container">
-              <img src="./images/lostandfound.png" alt="text" />
+                </ol>
+              </div>
+              <div className="col-12 col-md-6">
+                <img
+                  src="./images/lost-item.png"
+                  alt="Lost an item"
+                  style={{ width: "100%" }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -50,62 +74,51 @@ function Pictures() {
 
 const PictureStyle = styled.section`
   h1 {
-    // text-align: center;
-    padding-left: 210px;
     font-size: 3.5em;
+    font-weight: 600;
   }
+
+  .list-group-item {
+    border: none !important;
+  }
+
+  .top-heading {
+    margin: 2rem 0 5rem 0;
+  }
+
   .slogan-container {
     text-align: center !important;
+    margin: 2rem 0px 2rem 0px;
+    color: #35363a;
   }
+
   .content-container {
     display: flex;
     justify-content: space-between;
-    padding: 30px 200px;
-  }
-
-  .picture-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 40vh;
-  }
-
-  .steps-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    padding-left: 15px;
-    padding-top: 15px;
   }
 
   .directions-container {
     width: 100%;
     height: 100%;
   }
-  @media (min-width: 768px) {
-    /* Apply styles for screens wider than 768px (adjust as needed) */
-    .content-container {
-      flex-direction: row;
-      justify-content: space-between;
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+      font-weight: 600;
     }
 
-    .picture-container,
-    .steps-container {
-      width: 48%;
+    .top-heading {
+      margin: 1rem 0 3rem 0;
     }
 
-    .picture-container {
-      order: 2;
+    .btn {
+      font-size: 0.8rem;
     }
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
 
-  li::before {
-    content: "👉 ";
+    .lost-item-content {
+      flex-direction: column-reverse;
+    }
   }
 `;
 
