@@ -20,7 +20,7 @@ function Hero() {
             </button>
           </div>
         </div>
-        <div className="container">
+        <div className="bg-white content">
           <div className="container">
             <div className="row justify-content-between lost-item-content">
               <div className="col-12 col-md-6">
@@ -103,6 +103,10 @@ const PictureStyle = styled.section`
   h1 {
     font-size: 3.5em;
     font-weight: 600;
+  }
+
+  .content {
+    padding: 2rem 0 !important;
   }
 
   .top-heading {

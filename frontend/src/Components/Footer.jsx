@@ -12,12 +12,12 @@ const Footer = () => {
               className="d-flex align-items-center mb-3 link-dark text-decoration-none"
             >
               <img
-                src="./images/logo.png"
+                src="./images/logo_1.png"
                 alt="logo"
                 style={{ width: "72px" }}
               />
             </a>
-            <p className="text-muted">
+            <p className="text-muted text-white">
               Lost&FoundHub © 2023 <br /> All Rights Reserved
             </p>
           </div>
@@ -28,17 +28,17 @@ const Footer = () => {
             <h5>Quick Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Home
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Lost
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Found
                 </a>
               </li>
@@ -59,17 +59,17 @@ const Footer = () => {
             <h5>About Us</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Vishal Kumar Yadav
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Aditya
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Surya
                 </a>
               </li>
@@ -80,22 +80,22 @@ const Footer = () => {
             <h5>Support Links</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Terms & Conditions
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Privacy Policies
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   FAQs
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted text-white">
                   Report Issue
                 </a>
               </li>
@@ -108,8 +108,14 @@ const Footer = () => {
 };
 
 const FooterStyle = styled.section`
+  background-color: #3385ff !important;
+
   .footer-container {
     margin-top: 2rem;
+  }
+
+  .text-white {
+    color: white !important;
   }
 
   .btn-nav {
