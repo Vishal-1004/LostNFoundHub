@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
+import { Timeline, Event } from "./Timeline";
 
 function Hero() {
   return (
@@ -23,73 +24,51 @@ function Hero() {
         <div className="bg-white content">
           <div className="container">
             <div className="row justify-content-between lost-item-content">
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 my-2">
                 <h2>Lost an Item?</h2>
-                <ol className="list-group list-group-numbered">
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Login/Register</div>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Possimus, mollitia accusamus? Quis nesciunt nihil animi.
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Lost Item Section</div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Modi ad, maxime error laudantium voluptatibus
-                      consequuntur.
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Select Your Item</div>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Rem sed quibusdam atque ex vel mollitia!
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Visit AB-1 2nd Floor</div>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Rem sed quibusdam atque ex vel mollitia!
-                    </div>
-                  </li>
-                </ol>
+                <Fragment>
+                  <Timeline>
+                    <Event interval={"Step 1"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                    <Event interval={"Step 2"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                    <Event interval={"Step 3"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                    <Event interval={"Step 4"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                  </Timeline>
+                </Fragment>
               </div>
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 my-2">
                 <h2>Found an Item?</h2>
-                <ol className="list-group list-group-numbered">
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Login/Register</div>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Possimus, mollitia accusamus? Quis nesciunt nihil animi.
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Lost Item Section</div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Modi ad, maxime error laudantium voluptatibus
-                      consequuntur.
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Select Your Item</div>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Rem sed quibusdam atque ex vel mollitia!
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                      <div className="fw-bold">Visit AB-1 2nd Floor</div>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Rem sed quibusdam atque ex vel mollitia!
-                    </div>
-                  </li>
-                </ol>
+                <Fragment>
+                  <Timeline>
+                    <Event interval={"Step 1"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                    <Event interval={"Step 2"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                    <Event interval={"Step 3"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                    <Event interval={"Step 4"} title={"Lorem"}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Cumque ratione eligendi animi nemo consectetur asperiores?
+                    </Event>
+                  </Timeline>
+                </Fragment>
               </div>
             </div>
           </div>

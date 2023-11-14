@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <FooterStyle>
       <div className="container footer-container">
-        <footer className="row row-cols-5 py-4 my-1">
-          <div className="col">
+        <footer className="row  py-4 my-1">
+          <div className="col-12 col-md-3 logo-slogan">
             <a
               href="/"
               className="d-flex align-items-center mb-3 link-dark text-decoration-none"
@@ -22,11 +22,9 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="col"></div>
-
-          <div className="col">
+          <div className="col-12 col-md-3">
             <h5>Quick Links</h5>
-            <ul className="nav flex-column">
+            <ul className="nav flex-column quick-link">
               <li className="nav-item mb-2">
                 <a href="/" className="nav-link p-0 text-muted text-white">
                   Home
@@ -55,9 +53,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col">
+          <div className="col-12 col-md-3">
             <h5>About Us</h5>
-            <ul className="nav flex-column">
+            <ul className="nav flex-column about-us">
               <li className="nav-item mb-2">
                 <a href="/" className="nav-link p-0 text-muted text-white">
                   Vishal Kumar Yadav
@@ -76,9 +74,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col">
+          <div className="col-12 col-md-3">
             <h5>Support Links</h5>
-            <ul className="nav flex-column">
+            <ul className="nav flex-column support-links">
               <li className="nav-item mb-2">
                 <a href="/" className="nav-link p-0 text-muted text-white">
                   Terms & Conditions
@@ -125,6 +123,24 @@ const FooterStyle = styled.section`
 
     a {
       color: white !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-slogan {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .quick-link,
+    .about-us,
+    .support-links {
+      display: flex;
+      align-items: center;
+      flex-direction: row !important;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
     }
   }
 `;
