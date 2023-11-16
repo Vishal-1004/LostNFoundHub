@@ -6,6 +6,8 @@ import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import Lost from "./Pages/Lost";
 import Found from "./Pages/Found";
+import BackToTop from "./Components/ScrollButton";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/found" element={<Found />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <BackToTop />
       <Footer />
     </Router>
   );
