@@ -29,12 +29,20 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item mx-2">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/lost"
+                >
                   Lost
                 </Link>
               </li>
               <li className="nav-item mx-2">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/found"
+                >
                   Found
                 </Link>
               </li>
