@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,8 +8,8 @@ const Footer = () => {
       <div className="container footer-container">
         <footer className="row  py-4 my-1">
           <div className="col-12 col-md-3 logo-slogan">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="d-flex align-items-center mb-3 link-dark text-decoration-none"
             >
               <img
@@ -16,7 +17,7 @@ const Footer = () => {
                 alt="logo"
                 style={{ width: "72px" }}
               />
-            </a>
+            </Link>
             <p className="text-muted text-white">
               Lost&FoundHub © 2023 <br /> All Rights Reserved
             </p>
@@ -26,29 +27,29 @@ const Footer = () => {
             <h5>Quick Links</h5>
             <ul className="nav flex-column quick-link">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Lost
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Found
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2 btn-nav">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Sign In
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2 btn-nav">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Sign Up
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,19 +58,19 @@ const Footer = () => {
             <h5>About Us</h5>
             <ul className="nav flex-column about-us">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Vishal Kumar Yadav
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Aditya
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Surya
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -78,24 +79,24 @@ const Footer = () => {
             <h5>Support Links</h5>
             <ul className="nav flex-column support-links">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Privacy Policies
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   FAQs
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/" className="nav-link p-0 text-muted text-white">
                   Report Issue
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
