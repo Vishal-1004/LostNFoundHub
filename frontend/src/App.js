@@ -4,6 +4,8 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
+import Lost from "./Pages/Lost";
+import Found from "./Pages/Found";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/lost" element={<Lost />} />
+        <Route path="/found" element={<Found />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
