@@ -1,8 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { logoutUser } from "../Store/Slices/UserSlice";
 
 const Navbar = () => {
+  const Dispatch = useDispatch();
+  //const userState = useSelector((state) => state.users);
+
+  const handleLogout = () => {
+    //console.log("Before logout: " + userState.userId);
+    sessionStorage.removeItem("id");
+    Dispatch(logoutUser());
+  };
+
   return (
     <NavbarStyle>
       <nav className="navbar navbar-expand-lg navbar-light navbar-bg">
@@ -88,7 +99,10 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="log-hover">
-                    <Link className="logout dropdown-item" to="/">
+                    <button
+                      className="logout dropdown-item"
+                      onClick={handleLogout}
+                    >
                       Logout &nbsp;
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +121,7 @@ const Navbar = () => {
                           d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
                         />
                       </svg>
-                    </Link>
+                    </button>
                   </li>
                 </ul>
               </li>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { newUser } from "../Store/Slices/UserSlice";
+import { loginUser } from "../Store/Slices/UserSlice";
 
 const Login = () => {
   const Navigate = useNavigate();
@@ -21,7 +21,8 @@ const Login = () => {
   const login = async () => {
     await axios.post("http://localhost:5000/login", user).then((res) => {
       alert(res.data.message);
-      Dispatch(newUser(res.data.user._id));
+      Dispatch(loginUser(res.data.user._id));
+      sessionStorage.setItem("id", res.data.user._id);
       Navigate("/");
       //console.log(res.data.user);
     });
