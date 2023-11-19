@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
+import ScrollButton from "./Components/ScrollButton";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import Lost from "./Pages/Lost";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={userState ? <Home /> : <Login />} />
       </Routes>
       <PrivateRoute component={<Footer />} />
+      <PrivateRoute component ={<ScrollButton/>} />
     </Router>
   );
 }
