@@ -57,16 +57,6 @@ const Navbar = () => {
                   Found
                 </Link>
               </li>
-              <li className="nav-item mx-2 btn-nav px-2">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Sign In
-                </Link>
-              </li>
-              <li className="nav-item mx-2 btn-nav px-2">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Sign Up
-                </Link>
-              </li>
               <li className="nav-item mx-2 btn dropdown px-2">
                 <a
                   className="dropdown-toggle"

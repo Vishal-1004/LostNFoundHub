@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const id = sessionStorage.getItem("id");
-    console.log(id);
+    //console.log(id);
     if (id) {
       dispatch(loginUser(id));
     }

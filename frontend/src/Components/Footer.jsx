@@ -41,16 +41,6 @@ const Footer = () => {
                   Found
                 </Link>
               </li>
-              <li className="nav-item mb-2 btn-nav">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Sign In
-                </Link>
-              </li>
-              <li className="nav-item mb-2 btn-nav">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Sign Up
-                </Link>
-              </li>
             </ul>
           </div>
 
