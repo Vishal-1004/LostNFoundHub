@@ -45,8 +45,16 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.json({ message: "Hello, Backend is working fine" });
+app.get("/", async (req, res) => {
+  try {
+    const allUserData = await User.find();
+    return res.status(200).json(allUserData);
+  } catch (error) {
+    return res
+      .status(200)
+      .json({ message: "Some Error Occured", message: error.message });
+  }
+  //res.json({ message: "Hello, Backend is working fine" });
 });
 
 app.listen(5000, () => {

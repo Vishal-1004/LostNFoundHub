@@ -1,17 +1,19 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { logoutUser } from "../Store/Slices/UserSlice";
 
 const Navbar = () => {
   const Dispatch = useDispatch();
+  const navigate = useNavigate();
   //const userState = useSelector((state) => state.users);
 
   const handleLogout = () => {
     //console.log("Before logout: " + userState.userId);
     sessionStorage.removeItem("id");
     Dispatch(logoutUser());
+    navigate("/login");
   };
 
   return (

@@ -12,7 +12,7 @@ import {
 
 export default function ProfilePage() {
   return (
-    <section style={{ backgroundColor: "#eee" }}>
+    <section>
       <MDBContainer className="py-5">
         <MDBRow>
           <MDBCol lg="4">
@@ -25,11 +25,11 @@ export default function ProfilePage() {
                   style={{ width: "150px" }}
                   fluid
                 />
-                <p className="text-muted mb-1">Vishal Kumar Yadav</p>
+                <p className="text-muted mb-1">Hello Vishal</p>
                 <div className="d-flex justify-content-center mb-2">
-                  <MDBBtn>Follow</MDBBtn>
+                  <MDBBtn>Edit Profile</MDBBtn>
                   <MDBBtn outline className="ms-1">
-                    Message
+                    Logout
                   </MDBBtn>
                 </div>
               </MDBCardBody>
@@ -44,7 +44,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      Johnatan Smith
+                      Vishal Kumar Yadav
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -55,41 +55,26 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      example@example.com
+                      vishalkumar.yadav2021a@vitstudent.ac.in
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Phone</MDBCardText>
+                    <MDBCardText>Registration No.</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">
-                      (097) 234-5678
-                    </MDBCardText>
+                    <MDBCardText className="text-muted">21BCE1846</MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Mobile</MDBCardText>
+                    <MDBCardText>Dayscholar/Hosteler</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">
-                      (098) 765-4321
-                    </MDBCardText>
-                  </MDBCol>
-                </MDBRow>
-                <hr />
-                <MDBRow>
-                  <MDBCol sm="3">
-                    <MDBCardText>Address</MDBCardText>
-                  </MDBCol>
-                  <MDBCol sm="9">
-                    <MDBCardText className="text-muted">
-                      Bay Area, San Francisco, CA
-                    </MDBCardText>
+                    <MDBCardText className="text-muted">-</MDBCardText>
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>
