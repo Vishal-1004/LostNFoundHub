@@ -9,8 +9,11 @@ import {
   MDBCardImage,
   MDBBtn,
 } from "mdb-react-ui-kit";
+import { useSelector } from "react-redux";
 
 export default function ProfilePage() {
+  const userState = useSelector((state) => state.users);
+
   return (
     <section>
       <MDBContainer className="py-5">
@@ -25,7 +28,9 @@ export default function ProfilePage() {
                   style={{ width: "150px" }}
                   fluid
                 />
-                <p className="text-muted mb-1">Hello Vishal</p>
+                <p className="text-muted mb-1">
+                  Hello {userState.userName.split(" ")[0]}
+                </p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Edit Profile</MDBBtn>
                   <MDBBtn outline className="ms-1">
@@ -44,7 +49,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      Vishal Kumar Yadav
+                      {userState.userName}
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -55,7 +60,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      vishalkumar.yadav2021a@vitstudent.ac.in
+                      {userState.userEmail}
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -65,7 +70,9 @@ export default function ProfilePage() {
                     <MDBCardText>Registration No.</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">21BCE1846</MDBCardText>
+                    <MDBCardText className="text-muted">
+                      {userState.userRegNo}
+                    </MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />

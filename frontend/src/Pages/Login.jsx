@@ -21,10 +21,10 @@ const Login = () => {
   const login = async () => {
     await axios.post("http://localhost:5000/login", user).then((res) => {
       alert(res.data.message);
-      Dispatch(loginUser(res.data.user._id));
+      Dispatch(loginUser(res.data.user));
       sessionStorage.setItem("id", res.data.user._id);
       Navigate("/");
-      //console.log(res.data.user);
+      console.log(res.data.user);
     });
   };
 

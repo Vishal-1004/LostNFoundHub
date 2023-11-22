@@ -44,23 +44,6 @@ app.post("/login", async (req, res) => {
       .json({ message: "Some Error Occured", message: error.message });
   }
 });
-// Get user by ID
-app.get("/user/:id", async (req, res) => {
-  try {
-    const userId = req.params.id;
-    const user = await User.findById(userId);
-
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    return res.status(200).json(user);
-  } catch (error) {
-    return res
-      .status(500)
-      .json({ message: "Some error occurred", error: error.message });
-  }
-});
 
 app.get("/", async (req, res) => {
   try {
