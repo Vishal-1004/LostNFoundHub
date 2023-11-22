@@ -28,9 +28,7 @@ export default function ProfilePage() {
                   style={{ width: "150px" }}
                   fluid
                 />
-                <p className="text-muted mb-1">
-                  Hello {userState.userName.split(" ")[0]}
-                </p>
+                <p className="text-muted mb-1">Hello {userState.userName}</p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Edit Profile</MDBBtn>
                   <MDBBtn outline className="ms-1">
