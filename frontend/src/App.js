@@ -13,6 +13,7 @@ import PrivateRoute from "./Components/PrivateRoute";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { loginUser } from "./Store/Slices/UserSlice";
+import FAQ from "./Pages/FAQ";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +43,10 @@ function App() {
         <Route
           path="/profile"
           element={userState.isLoggedIn ? <Profile /> : <Login />}
+        />
+        <Route
+          path="/faq"
+          element={userState.isLoggedIn ? <FAQ /> : <Login />}
         />
         <Route
           path="/register"
