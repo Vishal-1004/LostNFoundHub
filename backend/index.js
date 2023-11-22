@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const bcrypt = require("bcryptjs");
 const User = require("./models/users.js");
 const connection = require("./database/Connection.js");
 
@@ -12,8 +13,12 @@ app.use(cors());
 app.post("/register", async (req, res) => {
   try {
     const { name, email, password, regNo } = req.body;
-    const user = new User({ name, email, password, regNo });
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const user = new User({ name, email, password: hashedPassword, regNo });
     await user.save();
+
     res.status(200).json({ message: "Sign Up Successful" });
   } catch (error) {
     // Duplicate key error (email is not unique)
@@ -29,22 +34,27 @@ app.post("/register", async (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ regNo: req.body.regNo });
+
     if (!user) {
       return res.status(200).json({ message: "Please Sign Up First" });
     }
 
-    if (req.body.password !== user.password) {
+    const passwordCheck = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
+
+    if (!passwordCheck) {
       return res.status(200).json({ message: "Password is Not Correct" });
     }
 
-    return res.status(200).json({ message: "Login Successfull", user: user });
+    return res.status(200).json({ message: "Login Successful", user: user });
   } catch (error) {
     return res
       .status(200)
-      .json({ message: "Some Error Occured", message: error.message });
+      .json({ message: "Some Error Occurred", message: error.message });
   }
 });
-
 app.get("/", async (req, res) => {
   try {
     const allUserData = await User.find();
@@ -52,7 +62,7 @@ app.get("/", async (req, res) => {
   } catch (error) {
     return res
       .status(200)
-      .json({ message: "Some Error Occured", message: error.message });
+      .json({ message: "Some Error Occurred", message: error.message });
   }
   //res.json({ message: "Hello, Backend is working fine" });
 });
