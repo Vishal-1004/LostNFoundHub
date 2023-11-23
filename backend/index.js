@@ -12,11 +12,17 @@ app.use(cors());
 // Register
 app.post("/register", async (req, res) => {
   try {
-    const { name, email, password, regNo } = req.body;
+    const { name, email, password, regNo, dayORhostel } = req.body;
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const user = new User({ name, email, password: hashedPassword, regNo });
+    const user = new User({
+      name,
+      email,
+      password: hashedPassword,
+      regNo,
+      dayORhostel,
+    });
     await user.save();
 
     res.status(200).json({ message: "Sign Up Successful" });
@@ -55,6 +61,9 @@ app.post("/login", async (req, res) => {
       .json({ message: "Some Error Occurred", message: error.message });
   }
 });
+
+// url: /profile/:id
+
 app.get("/", async (req, res) => {
   try {
     const allUserData = await User.find();

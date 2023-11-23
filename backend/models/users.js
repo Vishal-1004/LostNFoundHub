@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    dayORhostel: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

@@ -19,7 +19,8 @@ const Footer = () => {
               />
             </Link>
             <p className="text-muted text-white">
-              Lost&FoundHub © 2023 <br /> All Rights Reserved
+              Lost&FoundHub © {new Date().getFullYear()} <br /> All Rights
+              Reserved
             </p>
           </div>
 
