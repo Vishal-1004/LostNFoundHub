@@ -9,6 +9,7 @@ const Register = () => {
     name: "",
     email: "",
     regNo: "",
+    hostel: "",
     password: "",
     reEnterPassword: "",
   });
@@ -22,9 +23,33 @@ const Register = () => {
   };
 
   const register = async () => {
-    const { name, email, regNo, password, reEnterPassword } = user;
-    if (name && email && regNo && password && password === reEnterPassword) {
-      await axios.post("http://localhost:5000/register", user).then((res) => {
+    const { name, email, regNo, password, reEnterPassword, hostel } = user;
+    if (
+      name &&
+      email &&
+      regNo &&
+      hostel &&
+      password &&
+      password === reEnterPassword
+    ) {
+      if (
+        user.hostel.toUpperCase() !== "YES" &&
+        user.hostel.toUpperCase() !== "NO"
+      ) {
+        alert("Respond with YES or NO for Hostel field: ");
+        return;
+      }
+      const dayORhostel =
+        user.hostel.toUpperCase() === "YES" ? "Hosteler" : "Day Scholar";
+      const data = {
+        name,
+        email,
+        regNo,
+        password,
+        reEnterPassword,
+        dayORhostel,
+      };
+      await axios.post("http://localhost:5000/register", data).then((res) => {
         alert(res.data.message);
         Navigate("/login");
       });
@@ -58,6 +83,13 @@ const Register = () => {
             value={user.email}
             onChange={handleChange}
             placeholder="Your Email"
+          />
+          <input
+            type="text"
+            name="hostel"
+            value={user.hostel}
+            onChange={handleChange}
+            placeholder="Hosteler (YES/NO)?"
           />
           <input
             type="password"
