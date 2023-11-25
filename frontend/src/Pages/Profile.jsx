@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBCol,
   MDBContainer,
@@ -9,15 +9,50 @@ import {
   MDBCardImage,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { useSelector } from "react-redux";
+import {
+  MDBIcon,
+  MDBTabs,
+  MDBTabsItem,
+  MDBTabsLink,
+  MDBTabsContent,
+  MDBTabsPane,
+} from "mdb-react-ui-kit";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../Store/Slices/UserSlice";
+import axios from "axios";
 
 export default function ProfilePage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const userState = useSelector((state) => state.users);
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    regNo: "",
+    dayORhostel: "",
+  });
+
+  const id = sessionStorage.getItem("id");
+  useEffect(() => {
+    if (id) {
+      const getData = async () => {
+        try {
+          const res = await axios.get(`http://localhost:5000/profile/${id}`);
+          const { name, email, regNo, dayORhostel } = res.data;
+          setUserData({
+            name: name,
+            email: email,
+            regNo: regNo,
+            dayORhostel: dayORhostel,
+          });
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          // Handle the error, e.g., show a user-friendly message or log it
+        }
+      };
+      getData();
+    }
+  }, []);
 
   const handleLogout = () => {
     //console.log("Before logout: " + userState.userId);
@@ -26,9 +61,18 @@ export default function ProfilePage() {
     navigate("/login");
   };
 
+  const [iconsActive, setIconsActive] = useState("tab1");
+
+  const handleIconsClick = (value) => {
+    if (value === iconsActive) {
+      return;
+    }
+    setIconsActive(value);
+  };
+
   return (
     <section>
-      <MDBContainer className="py-5">
+      <MDBContainer className="py-3">
         <MDBRow>
           <MDBCol lg="4">
             <MDBCard className="mb-4">
@@ -40,7 +84,7 @@ export default function ProfilePage() {
                   style={{ width: "150px" }}
                   fluid
                 />
-                <p className="text-muted mb-1">Hello {userState.userName}</p>
+                <p className="text-muted mb-1">Hello {userData.name}</p>
                 <div className="d-flex justify-content-center mb-2">
                   <button
                     type="button"
@@ -66,7 +110,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      {userState.userName}
+                      {userData.name}
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -77,7 +121,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      {userState.userEmail}
+                      {userData.email}
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -88,7 +132,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      {userState.userRegNo}
+                      {userData.regNo}
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -99,7 +143,7 @@ export default function ProfilePage() {
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
-                      {userState.userDayORHostel}
+                      {userData.dayORhostel}
                     </MDBCardText>
                   </MDBCol>
                 </MDBRow>
@@ -108,6 +152,34 @@ export default function ProfilePage() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <MDBTabs fill className="container">
+        <MDBTabsItem>
+          <MDBTabsLink
+            className="d-flex justify-content-center align-items-center"
+            onClick={() => handleIconsClick("tab1")}
+            active={iconsActive === "tab1"}
+          >
+            <MDBIcon className="me-2" />
+            Lost Items
+          </MDBTabsLink>
+        </MDBTabsItem>
+        <MDBTabsItem>
+          <MDBTabsLink
+            className="d-flex justify-content-center align-items-center"
+            onClick={() => handleIconsClick("tab2")}
+            active={iconsActive === "tab2"}
+          >
+            <MDBIcon className="me-2" />
+            Found Items
+          </MDBTabsLink>
+        </MDBTabsItem>
+      </MDBTabs>
+
+      <MDBTabsContent className="container">
+        <MDBTabsPane open={iconsActive === "tab1"}>Lost Items</MDBTabsPane>
+        <MDBTabsPane open={iconsActive === "tab2"}>Found Items</MDBTabsPane>
+      </MDBTabsContent>
+      {/* given below is the structure of a model which opens when user clicks on "Edit Profile" button */}
       <div
         className="modal fade"
         id="exampleModal"

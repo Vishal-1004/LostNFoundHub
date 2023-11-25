@@ -24,7 +24,7 @@ const Login = () => {
       Dispatch(loginUser(res.data.user));
       sessionStorage.setItem("id", res.data.user._id);
       Navigate("/");
-      console.log(res.data.user);
+      //console.log(res.data.user);
     });
   };
 
