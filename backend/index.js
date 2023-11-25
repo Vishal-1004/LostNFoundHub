@@ -62,8 +62,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// url: /profile/:id
-
+// getting user data based on user id
 app.get("/profile/:id", async (req, res) => {
   try {
     const userId = req.params.id;
@@ -73,7 +72,7 @@ app.get("/profile/:id", async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
-    return res.status(200).json({ user: user });
+    return res.status(200).json(user);
   } catch (error) {
     return res
       .status(500)
