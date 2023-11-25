@@ -31,9 +31,66 @@ const Lost = () => {
                               email='surya.mu2021@vitstudent.ac.in'
                               register='21BCE1903'
                               />
-                              
+                              <Card text='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.'
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              />                              
+                              <Card text='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.'
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              />
+                              <Card text='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.'
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              />
+                             <Card text='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.'
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              />             
+                              <Card text='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.'
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              />
+                              <Card text='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.'
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              />                                               
                   </div>
              </div>
+             <nav className="mt-5"aria-label="Page navigation">
+                          <ul className="pagination pagination-md justify-content-center">
+                            <li className="page-item active py-2"><a class="page-link" href="/">1</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">2</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">3</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">4</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">5</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">6</a></li>
+                          </ul>
+                </nav>
       </>
   ); 
 };
