@@ -47,7 +47,7 @@ const FAQ = () => {
               </h2>
               <div
                 id="faqCollapseTwo"
-                className="accordion-collapse collapse show"
+                className="accordion-collapse collapse"
               >
                 <div className="accordion-body">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -72,7 +72,7 @@ const FAQ = () => {
               </h2>
               <div
                 id="faqCollapseThree"
-                className="accordion-collapse collapse show"
+                className="accordion-collapse collapse"
               >
                 <div className="accordion-body">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -97,7 +97,7 @@ const FAQ = () => {
               </h2>
               <div
                 id="faqCollapseFour"
-                className="accordion-collapse collapse show"
+                className="accordion-collapse collapse"
               >
                 <div className="accordion-body">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.

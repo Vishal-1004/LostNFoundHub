@@ -70,12 +70,12 @@ const Footer = () => {
             <h5>Support Links</h5>
             <ul className="nav flex-column support-links">
               <li className="nav-item mb-2">
-                <Link to="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/terms" className="nav-link p-0 text-muted text-white">
                   Terms & Conditions
                 </Link>
               </li>
               <li className="nav-item mb-2">
-                <Link to="/" className="nav-link p-0 text-muted text-white">
+                <Link to="/policy" className="nav-link p-0 text-muted text-white">
                   Privacy Policies
                 </Link>
               </li>
