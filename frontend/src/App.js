@@ -14,6 +14,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { loginUser } from "./Store/Slices/UserSlice";
 import FAQ from "./Pages/FAQ";
+import Policy from "./Pages/Policy";
+import Terms from "./Pages/Terms";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,6 +49,14 @@ function App() {
         <Route
           path="/faq"
           element={userState.isLoggedIn ? <FAQ /> : <Login />}
+        />
+        <Route
+          path="/policy"
+          element={userState.isLoggedIn ? <Policy/> : <Login />}
+        />
+        <Route
+          path="/terms"
+          element={userState.isLoggedIn ? <Terms /> : <Login/>}
         />
         <Route
           path="/register"
