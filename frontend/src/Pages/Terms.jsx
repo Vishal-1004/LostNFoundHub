@@ -88,30 +88,32 @@ function Terms() {
 }
 
 const TermsStyle = styled.section`
-  p {
+p {
     font-size: 1.1rem;
     letter-spacing: 0.9px;
     line-height: 1.5rem;
   }
 
   .main-heading {
-    display: inline-block;
-    margin-top: 2rem !important;
+    display: inline;
+    margin-top: 1rem !important;
     font-size: 2rem;
     font-weight: 400 !important;
     border-bottom: 3px solid #0d6efd;
-    text-align:center;
-    margin-left:31rem !important;
+    margin-left: 30rem !important;
+    
   }
 
   ul {
     list-style-type: none;
     padding: 0;
-    padding-left:32px;
+    padding-left: 15px;
+    padding-top: 20px;
   }
 
   li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    overflow-wrap: break-word;
   }
 
   h2 {
@@ -121,9 +123,28 @@ const TermsStyle = styled.section`
 
   h3 {
     font-size: 1.1rem;
+    color: #0d6efd;
+    padding-left: 24px;
     color: #333;
-    padding-left: 25px;
-    padding-top: 2px;
+  }
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 767px) {
+    .main-heading {
+      margin-left: 79px !important;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    h2{
+        padding-left: 15px;
+        margin-left: -30px;
+        font-size: 1.2rem;
+    }
+    h3{
+        padding-right: 5px;
+        font-size: 1rem;
+    }
   }
 `;
 
