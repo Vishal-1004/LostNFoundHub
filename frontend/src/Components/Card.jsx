@@ -4,16 +4,16 @@ function Card(props) {
   return (
 
 
-            <div className="col-12 col-md-6 col-lg-4">
-                <div className="card">
-                    <img src="./images/Earbuds_Lost.jpg" alt="Logo" className='card-img-top' />
+            <div className="col-12 col-md-6 col-lg-4 container row g-3 text-center mx-auto ps-5">
+                <div className="card align-items-center" style={{width:"320px",padding:"0px"}}>
+                    <img src="./images/Earbuds_Lost.jpg" alt="Logo" className='card-img-top' style={{width:"250px",height:"250px"}} />
                     
                     <div className="card-body">
                             <h5 className='card-title'>{props.title}</h5>
-                            <p className="card-text">
+                            <p className="card-text" style={{fontSize:"15px"}}>
                                     {props.text}
                             </p>
-                            <button  type='button' className='btn btn-dark text-center w-75 ms-4' data-bs-toggle='modal' data-bs-target='#exampleModalCenter'>View Details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <button  type='button' className='btn btn-dark text-center w-50 ms-4' data-bs-toggle='modal' data-bs-target='#exampleModalCenter'>View Details <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
 </svg></button>
                     </div>
