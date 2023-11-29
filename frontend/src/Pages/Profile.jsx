@@ -202,24 +202,16 @@ export default function ProfilePage() {
             </div>
             <div className="modal-body">
               <div className="mb-3">
-                <label htmlFor="formFile" className="form-label">
-                  Upload Profile Pic
-                </label>
-                <input className="form-control" type="file" id="formFile" />
-              </div>
-              <div className="mb-3">
                 <label
                   htmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
-                  Day Scholoar / Hosteler
+                  Day Scholar / Hosteler
                 </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Day Scholar / Hosteler"
-                />
+                  <select className="form-select" id="exampleFormControlSelect" aria-label="Select Day Scholar or Hosteller">
+                  <option value="day-scholar">Day Scholar</option>
+                  <option value="hosteler">Hosteler</option>
+                 </select>
               </div>
               <div className="mb-3">
                 <label
