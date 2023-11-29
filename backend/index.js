@@ -92,6 +92,31 @@ app.get("/", async (req, res) => {
   //res.json({ message: "Hello, Backend is working fine" });
 });
 
+// Update Password and dayORhostel
+app.patch("/profile/:id", async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const { password, dayORhostel } = req.body;
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    if (password) {
+      const hashedPassword = await bcrypt.hash(password, 10);
+      user.password = hashedPassword;
+    }
+    if (dayORhostel) {
+      user.dayORhostel = dayORhostel;
+    }
+    await user.save();
+    return res.status(200).json({ message: "Update Successful", user });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Some Error Occurred", error: error.message });
+  }
+});
+
 app.listen(5000, () => {
   console.log("Server started at port: http://localhost:5000");
   const url =
