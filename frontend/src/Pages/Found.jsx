@@ -1,182 +1,118 @@
 import React from "react";
+import Card from "../Components/Card";
 
 const Found = () => {
   return (
-    <div>
-      <h1 className="text-center my-5">This is found page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa vero rem
-        soluta, quas ducimus sunt sed animi dolore eius vitae recusandae fugit,
-        totam beatae, dolores fugiat nesciunt illo nobis quaerat. Porro nam,
-        dolorem quos veniam placeat explicabo sapiente ipsum id. Debitis, fugiat
-        molestias. Rerum unde, laboriosam saepe nisi veritatis quaerat quo
-        dolore fuga quidem adipisci consequuntur non, nobis, vero esse! Ab nam
-        dolore rem optio modi, fuga placeat eligendi temporibus accusantium quae
-        ad omnis perspiciatis nemo ullam quia distinctio adipisci recusandae
-        aliquid unde dolorem at. Deserunt omnis asperiores eius, officia
-        similique saepe quasi facere vitae quisquam impedit nisi molestias,
-        placeat cum accusamus harum! Et quas deserunt fugiat totam suscipit
-        labore incidunt, corrupti amet mollitia, accusamus laboriosam,
-        voluptatum harum voluptates quibusdam esse ipsa? Praesentium ipsam nemo
-        harum. Dignissimos esse, fugiat dicta ad itaque cupiditate. Nostrum
-        dolorem pariatur omnis cum quaerat doloribus fugiat tempora deleniti.
-        Nemo sit voluptatem, placeat quasi suscipit laborum voluptate minima,
-        maiores odio, harum qui quis vel nisi tempora soluta provident incidunt?
-        Illo itaque recusandae commodi esse a soluta, facilis, quo fugit autem,
-        magni illum molestiae suscipit minima voluptates dolor? Nesciunt et
-        placeat, at doloribus recusandae, consectetur provident tempore veniam
-        aliquam repudiandae rerum aperiam perferendis quibusdam reiciendis
-        facere id tenetur. Asperiores aliquid accusantium totam hic ea quasi
-        iure tenetur quisquam non fugit. Adipisci corrupti fugit quisquam et
-        quaerat. Repellat, maiores fuga magni asperiores tenetur deleniti ullam!
-        Repellat voluptatibus corrupti nemo magni consequuntur reprehenderit
-        voluptatem maxime aliquam cum repellendus quos, ab quod, dolor, nobis
-        quidem velit vitae natus. Praesentium numquam eligendi voluptas sit
-        accusantium velit voluptatem fuga. Alias quos fugit nobis necessitatibus
-        totam eaque cumque dolorum cupiditate asperiores aperiam aliquid id
-        tenetur, molestias debitis iure minima, molestiae blanditiis porro animi
-        placeat, veritatis distinctio! Non perspiciatis, dolorum minus
-        voluptatum expedita officiis, eveniet nesciunt unde quae deserunt,
-        veritatis ipsa numquam doloremque deleniti doloribus provident
-        recusandae! Ducimus quaerat ipsum nostrum sit vitae! Dicta repellendus
-        dolore eos a, voluptatibus voluptas dolores necessitatibus ex molestiae
-        laborum doloribus vero eligendi sint saepe sed sit omnis! Facere, beatae
-        ullam totam natus fuga temporibus accusantium harum ratione consequatur,
-        ea porro cupiditate optio, asperiores laborum doloribus consectetur
-        nobis at itaque nostrum nulla provident dicta? Error, sed asperiores?
-        Esse fugiat voluptatibus sint, veniam minima exercitationem facilis
-        deserunt dolorum nostrum, magni veritatis quis illo illum modi id
-        adipisci possimus laboriosam quisquam numquam sapiente excepturi
-        tempora? Error hic ipsam eos alias repellat nihil assumenda doloribus
-        facere. Dolorem quae, tempora debitis, eveniet incidunt aliquam eaque
-        quod, natus nobis vitae distinctio accusantium! Cupiditate ratione odit
-        mollitia sequi natus, quisquam deleniti laboriosam recusandae doloribus
-        doloremque voluptas incidunt, modi sed, magni eveniet veniam ab laborum.
-        Voluptatem maiores cupiditate amet? Esse repellat inventore dolores quis
-        suscipit voluptates laboriosam nobis autem harum et alias in, tempore
-        amet quibusdam eaque saepe deleniti qui odio debitis quod. Nam nobis
-        placeat aliquam at eaque. Iste, quis? Non sed, adipisci saepe harum quia
-        iste praesentium exercitationem fugiat commodi, deserunt quae?
-        Distinctio consectetur vero, obcaecati fuga blanditiis aut rem sed.
-        Explicabo omnis qui itaque nesciunt blanditiis quos iure a consectetur,
-        nisi mollitia repellendus?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa vero rem
-        soluta, quas ducimus sunt sed animi dolore eius vitae recusandae fugit,
-        totam beatae, dolores fugiat nesciunt illo nobis quaerat. Porro nam,
-        dolorem quos veniam placeat explicabo sapiente ipsum id. Debitis, fugiat
-        molestias. Rerum unde, laboriosam saepe nisi veritatis quaerat quo
-        dolore fuga quidem adipisci consequuntur non, nobis, vero esse! Ab nam
-        dolore rem optio modi, fuga placeat eligendi temporibus accusantium quae
-        ad omnis perspiciatis nemo ullam quia distinctio adipisci recusandae
-        aliquid unde dolorem at. Deserunt omnis asperiores eius, officia
-        similique saepe quasi facere vitae quisquam impedit nisi molestias,
-        placeat cum accusamus harum! Et quas deserunt fugiat totam suscipit
-        labore incidunt, corrupti amet mollitia, accusamus laboriosam,
-        voluptatum harum voluptates quibusdam esse ipsa? Praesentium ipsam nemo
-        harum. Dignissimos esse, fugiat dicta ad itaque cupiditate. Nostrum
-        dolorem pariatur omnis cum quaerat doloribus fugiat tempora deleniti.
-        Nemo sit voluptatem, placeat quasi suscipit laborum voluptate minima,
-        maiores odio, harum qui quis vel nisi tempora soluta provident incidunt?
-        Illo itaque recusandae commodi esse a soluta, facilis, quo fugit autem,
-        magni illum molestiae suscipit minima voluptates dolor? Nesciunt et
-        placeat, at doloribus recusandae, consectetur provident tempore veniam
-        aliquam repudiandae rerum aperiam perferendis quibusdam reiciendis
-        facere id tenetur. Asperiores aliquid accusantium totam hic ea quasi
-        iure tenetur quisquam non fugit. Adipisci corrupti fugit quisquam et
-        quaerat. Repellat, maiores fuga magni asperiores tenetur deleniti ullam!
-        Repellat voluptatibus corrupti nemo magni consequuntur reprehenderit
-        voluptatem maxime aliquam cum repellendus quos, ab quod, dolor, nobis
-        quidem velit vitae natus. Praesentium numquam eligendi voluptas sit
-        accusantium velit voluptatem fuga. Alias quos fugit nobis necessitatibus
-        totam eaque cumque dolorum cupiditate asperiores aperiam aliquid id
-        tenetur, molestias debitis iure minima, molestiae blanditiis porro animi
-        placeat, veritatis distinctio! Non perspiciatis, dolorum minus
-        voluptatum expedita officiis, eveniet nesciunt unde quae deserunt,
-        veritatis ipsa numquam doloremque deleniti doloribus provident
-        recusandae! Ducimus quaerat ipsum nostrum sit vitae! Dicta repellendus
-        dolore eos a, voluptatibus voluptas dolores necessitatibus ex molestiae
-        laborum doloribus vero eligendi sint saepe sed sit omnis! Facere, beatae
-        ullam totam natus fuga temporibus accusantium harum ratione consequatur,
-        ea porro cupiditate optio, asperiores laborum doloribus consectetur
-        nobis at itaque nostrum nulla provident dicta? Error, sed asperiores?
-        Esse fugiat voluptatibus sint, veniam minima exercitationem facilis
-        deserunt dolorum nostrum, magni veritatis quis illo illum modi id
-        adipisci possimus laboriosam quisquam numquam sapiente excepturi
-        tempora? Error hic ipsam eos alias repellat nihil assumenda doloribus
-        facere. Dolorem quae, tempora debitis, eveniet incidunt aliquam eaque
-        quod, natus nobis vitae distinctio accusantium! Cupiditate ratione odit
-        mollitia sequi natus, quisquam deleniti laboriosam recusandae doloribus
-        doloremque voluptas incidunt, modi sed, magni eveniet veniam ab laborum.
-        Voluptatem maiores cupiditate amet? Esse repellat inventore dolores quis
-        suscipit voluptates laboriosam nobis autem harum et alias in, tempore
-        amet quibusdam eaque saepe deleniti qui odio debitis quod. Nam nobis
-        placeat aliquam at eaque. Iste, quis? Non sed, adipisci saepe harum quia
-        iste praesentium exercitationem fugiat commodi, deserunt quae?
-        Distinctio consectetur vero, obcaecati fuga blanditiis aut rem sed.
-        Explicabo omnis qui itaque nesciunt blanditiis quos iure a consectetur,
-        nisi mollitia repellendus?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa vero rem
-        soluta, quas ducimus sunt sed animi dolore eius vitae recusandae fugit,
-        totam beatae, dolores fugiat nesciunt illo nobis quaerat. Porro nam,
-        dolorem quos veniam placeat explicabo sapiente ipsum id. Debitis, fugiat
-        molestias. Rerum unde, laboriosam saepe nisi veritatis quaerat quo
-        dolore fuga quidem adipisci consequuntur non, nobis, vero esse! Ab nam
-        dolore rem optio modi, fuga placeat eligendi temporibus accusantium quae
-        ad omnis perspiciatis nemo ullam quia distinctio adipisci recusandae
-        aliquid unde dolorem at. Deserunt omnis asperiores eius, officia
-        similique saepe quasi facere vitae quisquam impedit nisi molestias,
-        placeat cum accusamus harum! Et quas deserunt fugiat totam suscipit
-        labore incidunt, corrupti amet mollitia, accusamus laboriosam,
-        voluptatum harum voluptates quibusdam esse ipsa? Praesentium ipsam nemo
-        harum. Dignissimos esse, fugiat dicta ad itaque cupiditate. Nostrum
-        dolorem pariatur omnis cum quaerat doloribus fugiat tempora deleniti.
-        Nemo sit voluptatem, placeat quasi suscipit laborum voluptate minima,
-        maiores odio, harum qui quis vel nisi tempora soluta provident incidunt?
-        Illo itaque recusandae commodi esse a soluta, facilis, quo fugit autem,
-        magni illum molestiae suscipit minima voluptates dolor? Nesciunt et
-        placeat, at doloribus recusandae, consectetur provident tempore veniam
-        aliquam repudiandae rerum aperiam perferendis quibusdam reiciendis
-        facere id tenetur. Asperiores aliquid accusantium totam hic ea quasi
-        iure tenetur quisquam non fugit. Adipisci corrupti fugit quisquam et
-        quaerat. Repellat, maiores fuga magni asperiores tenetur deleniti ullam!
-        Repellat voluptatibus corrupti nemo magni consequuntur reprehenderit
-        voluptatem maxime aliquam cum repellendus quos, ab quod, dolor, nobis
-        quidem velit vitae natus. Praesentium numquam eligendi voluptas sit
-        accusantium velit voluptatem fuga. Alias quos fugit nobis necessitatibus
-        totam eaque cumque dolorum cupiditate asperiores aperiam aliquid id
-        tenetur, molestias debitis iure minima, molestiae blanditiis porro animi
-        placeat, veritatis distinctio! Non perspiciatis, dolorum minus
-        voluptatum expedita officiis, eveniet nesciunt unde quae deserunt,
-        veritatis ipsa numquam doloremque deleniti doloribus provident
-        recusandae! Ducimus quaerat ipsum nostrum sit vitae! Dicta repellendus
-        dolore eos a, voluptatibus voluptas dolores necessitatibus ex molestiae
-        laborum doloribus vero eligendi sint saepe sed sit omnis! Facere, beatae
-        ullam totam natus fuga temporibus accusantium harum ratione consequatur,
-        ea porro cupiditate optio, asperiores laborum doloribus consectetur
-        nobis at itaque nostrum nulla provident dicta? Error, sed asperiores?
-        Esse fugiat voluptatibus sint, veniam minima exercitationem facilis
-        deserunt dolorum nostrum, magni veritatis quis illo illum modi id
-        adipisci possimus laboriosam quisquam numquam sapiente excepturi
-        tempora? Error hic ipsam eos alias repellat nihil assumenda doloribus
-        facere. Dolorem quae, tempora debitis, eveniet incidunt aliquam eaque
-        quod, natus nobis vitae distinctio accusantium! Cupiditate ratione odit
-        mollitia sequi natus, quisquam deleniti laboriosam recusandae doloribus
-        doloremque voluptas incidunt, modi sed, magni eveniet veniam ab laborum.
-        Voluptatem maiores cupiditate amet? Esse repellat inventore dolores quis
-        suscipit voluptates laboriosam nobis autem harum et alias in, tempore
-        amet quibusdam eaque saepe deleniti qui odio debitis quod. Nam nobis
-        placeat aliquam at eaque. Iste, quis? Non sed, adipisci saepe harum quia
-        iste praesentium exercitationem fugiat commodi, deserunt quae?
-        Distinctio consectetur vero, obcaecati fuga blanditiis aut rem sed.
-        Explicabo omnis qui itaque nesciunt blanditiis quos iure a consectetur,
-        nisi mollitia repellendus?
-      </p>
-    </div>
-  );
+    <>
+            <div className='container'>
+                <div className='row g-3'>
+                  <h2 className="text-center">Found Items Archive</h2>
+                            <Card
+                              title='Lost Earbuds'
+                              description='I lost my Boat Earphones in AB2-404 on Wednesday, please help me find it.' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image1.jpg"
+                              index = {1}
+                              />
+                              <Card 
+                              title='Scientific Calculator lost'
+                              description='I lost my calculator in AB-1. If found contact me' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image2.jpg"
+                              index={2}
+                              />
+                              <Card 
+                              title='OnePlus Charger Missing'
+                              description='Found in AB1 408 OnePlus 80W charger' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image3.jpg"
+                              index={3}
+                              />
+                              <Card 
+                              title='Laptop Sleeve (Gaming Laptop) lost'
+                              description='I lost this laptop sleeve in AB1 today
+                              If found, Pls contact me i need it as soon as possible, thanks ' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image4.jpg"
+                              index={4}
+                              />                              
+                              <Card 
+                              title='Boult Airpods in AB2-407'
+                              description='Found these earpods in AB2-407. Owner contact me asap ' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image5.jpg"
+                              index={5}
+                              />
+                              <Card
+                              title='Pendrive missing on Tue'
+                              description='I have Lost my Pendrive Huawei on Monday in Ab1-311.    If anyone find this please contact 6380954520' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image6.jpg"
+                              index={6}
+                              />
+                             <Card 
+                              title='Steel bottle and Umbrella Missing'
+                              description='Near aavin circle around 2pm missing' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image7.jpg"
+                              index={7}
+                              />             
+                              <Card 
+                              title='Contact me if Earpods found any where'
+                              description='I lost it in Delta block last tuesday' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image8.jpg"
+                              index={8}
+                              />
+                              <Card 
+                              title='Jack and Jones cap missing'
+                              description='Cap lost in ab1 or ab1 lawn, if found please contact me thanks!' 
+                              date='22/11/2023'
+                              name='Surya M.U'
+                              email='surya.mu2021@vitstudent.ac.in'
+                              register='21BCE1903'
+                              img = "../images/Lost_Image9.jpg"
+                              index={9}
+                              />                                               
+                  </div>
+             </div>
+             <nav className="mt-5"aria-label="Page navigation">
+                          <ul className="pagination pagination-md justify-content-center">
+                            <li className="page-item active py-2"><a class="page-link" href="/">1</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">2</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">3</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">4</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">5</a></li>
+                            <li className="page-item py-2"><a class="page-link" href="/">6</a></li>
+                          </ul>
+                </nav>
+      </>
+  ); 
 };
+
 
 export default Found;
