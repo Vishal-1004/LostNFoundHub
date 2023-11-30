@@ -54,6 +54,63 @@ export default function ProfilePage() {
     }
   }, []);
 
+  const [updateData, setUpdateData] = useState({
+    dayORhostel: "",
+    password: "",
+    reEnterPassword: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUpdateData({
+      ...updateData,
+      [name]: value,
+    });
+  };
+
+  const update = async (data) => {
+    try {
+      await axios
+        .patch(`http://localhost:5000/profile/${id}`, data)
+        .then((res) => {
+          alert(res.data.message);
+        });
+    } catch (error) {
+      console.log("Some Error occured while updating: ", error.message);
+    }
+  };
+
+  const handleSaveChanges = () => {
+    const { dayORhostel, password, reEnterPassword } = updateData;
+    console.log(dayORhostel, password, reEnterPassword);
+    if (password.length !== 0) {
+      if (password !== reEnterPassword) {
+        alert("Password and Re-enter Password should be same");
+      } else {
+        if (dayORhostel.length !== 0) {
+          //alert("Day Scholoar / Hosteler data and Password is given");
+          const data = { dayORhostel, password };
+          update(data);
+        } else {
+          /*alert(
+            "Day Scholoar / Hosteler data is not given but Password is given"
+          );*/
+          const data = { password };
+          update(data);
+        }
+      }
+    } else {
+      if (dayORhostel.length === 0) {
+        alert("Enter something if you want to update it");
+      } else {
+        //alert("Only Day Scholoar / Hosteler data is given");
+        const data = { dayORhostel };
+        update(data);
+      }
+    }
+    setUpdateData({ dayORhostel: "", password: "", reEnterPassword: "" });
+  };
+
   const handleLogout = () => {
     //console.log("Before logout: " + userState.userId);
     sessionStorage.removeItem("id");
@@ -208,10 +265,18 @@ export default function ProfilePage() {
                 >
                   Day Scholar / Hosteler
                 </label>
-                  <select className="form-select" id="exampleFormControlSelect" aria-label="Select Day Scholar or Hosteller">
-                  <option value="day-scholar">Day Scholar</option>
-                  <option value="hosteler">Hosteler</option>
-                 </select>
+                <select
+                  className="form-select"
+                  id="exampleFormControlSelect"
+                  aria-label="Select Day Scholar or Hosteller"
+                  name="dayORhostel"
+                  value={updateData.dayORhostel}
+                  onChange={handleChange}
+                >
+                  <option value="None">Select One</option>
+                  <option value="Day Scholoar">Day Scholar</option>
+                  <option value="Hosteler">Hosteler</option>
+                </select>
               </div>
               <div className="mb-3">
                 <label
@@ -221,10 +286,13 @@ export default function ProfilePage() {
                   New Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   className="form-control"
                   id="exampleFormControlInput2"
                   placeholder="Password"
+                  name="password"
+                  value={updateData.password}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-3">
@@ -235,15 +303,22 @@ export default function ProfilePage() {
                   Re-Enter Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   className="form-control"
                   id="exampleFormControlInput3"
                   placeholder="Re-Enter Password"
+                  name="reEnterPassword"
+                  value={updateData.reEnterPassword}
+                  onChange={handleChange}
                 />
               </div>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-primary">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleSaveChanges}
+              >
                 Save changes
               </button>
             </div>
