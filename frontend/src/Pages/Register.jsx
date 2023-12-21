@@ -38,6 +38,8 @@ const Register = () => {
       ) {
         alert("Respond with YES or NO for Hostel field: ");
         return;
+      } else if (!email.includes("@vitstudent.ac.in")) {
+        alert("Enter valid college Email Id");
       }
       const dayORhostel =
         user.hostel.toUpperCase() === "YES" ? "Hosteler" : "Day Scholar";

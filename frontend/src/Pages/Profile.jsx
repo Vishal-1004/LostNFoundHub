@@ -74,6 +74,7 @@ export default function ProfilePage() {
         .patch(`http://localhost:5000/profile/${id}`, data)
         .then((res) => {
           alert(res.data.message);
+          window.location.reload();
         });
     } catch (error) {
       console.log("Some Error occured while updating: ", error.message);
