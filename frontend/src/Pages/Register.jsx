@@ -9,7 +9,7 @@ const Register = () => {
     name: "",
     email: "",
     regNo: "",
-    hostel: "",
+    dayORhostel: "None",
     password: "",
     reEnterPassword: "",
   });
@@ -23,26 +23,24 @@ const Register = () => {
   };
 
   const register = async () => {
-    const { name, email, regNo, password, reEnterPassword, hostel } = user;
+    const { name, email, regNo, password, reEnterPassword, dayORhostel } = user;
     if (
       name &&
       email &&
       regNo &&
-      hostel &&
+      dayORhostel &&
       password &&
       password === reEnterPassword
     ) {
-      if (
-        user.hostel.toUpperCase() !== "YES" &&
-        user.hostel.toUpperCase() !== "NO"
-      ) {
-        alert("Respond with YES or NO for Hostel field: ");
+      //console.log(dayORhostel);
+      if (user.dayORhostel === "None") {
+        alert("Select Day Scholar or Hosteler input field");
         return;
       } else if (!email.includes("@vitstudent.ac.in")) {
         alert("Enter valid college Email Id");
       }
-      const dayORhostel =
-        user.hostel.toUpperCase() === "YES" ? "Hosteler" : "Day Scholar";
+      /*const dayORhostel =
+        user.dayORhostel.toUpperCase() === "YES" ? "Hosteler" : "Day Scholar";*/
       const data = {
         name,
         email,
@@ -56,7 +54,7 @@ const Register = () => {
         Navigate("/login");
       });
     } else {
-      alert("invlid input");
+      alert("Enter all input fields");
     }
   };
 
@@ -86,13 +84,22 @@ const Register = () => {
             onChange={handleChange}
             placeholder="Your Email"
           />
-          <input
-            type="text"
-            name="hostel"
-            value={user.hostel}
+          <select
+            className={
+              user.dayORhostel === "None"
+                ? "form-select text-muted"
+                : "form-select"
+            }
+            id="exampleFormControlSelect"
+            aria-label="Select Day Scholar or Hosteller"
+            name="dayORhostel"
+            value={user.dayORhostel}
             onChange={handleChange}
-            placeholder="Hosteler (YES/NO)?"
-          />
+          >
+            <option value="None">Select Day Scholar / Hosteler</option>
+            <option value="Day Scholoar">Day Scholar</option>
+            <option value="Hosteler">Hosteler</option>
+          </select>
           <input
             type="password"
             name="password"
@@ -163,6 +170,16 @@ const RegisterStyle = styled.section`
     border-radius: 8px;
     outline: none;
     cursor: pointer;
+  }
+
+  .register > select {
+    border-radius: 8px;
+    border: 2px solid #dddfe2;
+    outline: none;
+    color: #1d2129;
+    margin: 8px 15px;
+    width: 92%;
+    height: 45px;
   }
 `;
 

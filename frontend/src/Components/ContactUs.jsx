@@ -1,7 +1,37 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function ContactUs() {
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    regNo: "",
+    dayORhostel: "",
+  });
+
+  const id = sessionStorage.getItem("id");
+  useEffect(() => {
+    if (id) {
+      const getData = async () => {
+        try {
+          const res = await axios.get(`http://localhost:5000/profile/${id}`);
+          const { name, email, regNo, dayORhostel } = res.data;
+          setUserData({
+            name: name,
+            email: email,
+            regNo: regNo,
+            dayORhostel: dayORhostel,
+          });
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          // Handle the error, e.g., show a user-friendly message or log it
+        }
+      };
+      getData();
+    }
+  }, []);
+
   return (
     <ContactUsStyle>
       <div className="container py-4">
@@ -34,9 +64,11 @@ export default function ContactUs() {
                     className="form-control"
                     id="name"
                     name="name"
+                    value={userData.name}
                     placeholder="Name"
                     type="text"
                     required
+                    readOnly
                   />
                 </div>
                 <div lg="6" className="col form-group">
@@ -44,9 +76,11 @@ export default function ContactUs() {
                     className="form-control rounded-0"
                     id="email"
                     name="email"
+                    value={userData.email}
                     placeholder="Email"
                     type="email"
                     required
+                    readOnly
                   />
                 </div>
               </div>
