@@ -16,6 +16,7 @@ import { loginUser } from "./Store/Slices/UserSlice";
 import FAQ from "./Pages/FAQ";
 import Policy from "./Pages/Policy";
 import Terms from "./Pages/Terms";
+import ScrollTop from "./Components/ScrollTop";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollTop/>
       <PrivateRoute component={<Navbar />} />
       <Routes>
         <Route path="/" element={userState.isLoggedIn ? <Home /> : <Login />} />
